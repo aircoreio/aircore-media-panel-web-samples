@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Aircore Media Panel - Basic HTML Example</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="https://unpkg.com/@aircore/aircore-media-panel/dist/index.css">
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <script type="module">
+    import { createClientWithPublishableKey } from 'https://unpkg.com/@aircore/aircore-panel-core/dist/index.js';
+    import { MediaPanel } from 'https://unpkg.com/@aircore/aircore-media-panel/dist/index.js';
+
+    const publishableApiKey ='ADD_YOUR_PUBLISHABLE_API_KEY_HERE';
+    const channelId = 'YOUR_CHANNEL_ID';
+    const userId = 'YOUR_USER_ID';
+
+    const client = createClientWithPublishableKey(publishableApiKey, userId);
+    client.setUserDisplayName("John Doe");
+    client.setUserAvatarUrl("https://unsplash.it/200/200");
+    client.connect(channelId);
+
+    MediaPanel("#my-media-panel", {
+      client,
+      channelId,
+      config: {
+          expandedStateOptions: {
+            placement: 'bottom',
+            autoHide: false,
+            expandOnLoad: true,
+          },
+        },
+    });
+  </script>
+  <div class="container">
+    <!-- Media panel will be rendered in here -->
+    <div id="my-media-panel"></div>
+  </div>
+</body>
+</html>
