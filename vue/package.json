@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "vue": "^3.2.38",
-    "@aircore/aircore-media-panel": "0.0.1",
-    "@aircore/aircore-panel-core": "0.0.1",
+    "@aircore/aircore-media-panel": "latest",
+    "@aircore/aircore-panel-core": "latest",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
