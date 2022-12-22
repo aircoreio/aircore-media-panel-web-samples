@@ -1,12 +1,10 @@
-const withTM = require('next-transpile-modules')(['@aircore/aircore-media-panel', '@aircore/aircore-panel-core']);
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
   async redirects() {
     return [];
   },
 }
 
-module.exports = withTM(nextConfig);
+module.exports = nextConfig;
