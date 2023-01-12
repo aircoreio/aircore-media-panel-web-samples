@@ -19,6 +19,13 @@
   </style>
 </head>
 <body>
+  <script type="importmap">
+    {
+      "imports": {
+       "@aircore/aircore-panel-core": "https://unpkg.com/@aircore/aircore-panel-core/dist/index.js"
+      }
+   }
+  </script>
   <script type="module">
     import { createClientWithPublishableKey } from 'https://unpkg.com/@aircore/aircore-panel-core/dist/index.js';
     import { MediaPanel } from 'https://unpkg.com/@aircore/aircore-media-panel/dist/index.js';
