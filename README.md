@@ -1,6 +1,6 @@
 # Web Media Panel SDK
 
-- [Getting Started](https://docs.aircore.io/web/mediapanel/getting-started)
+- [Quickstart](https://docs.aircore.io/web/mediapanel/quickstart)
 
 
 ## Samples
